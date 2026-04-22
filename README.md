@@ -2,8 +2,6 @@
 
 > Baseline behavior principles for any AI coding agent.
 
-**English** | **[ไทย](README.th.md)**
-
 Elder is a small set of behavior principles that you drop into your AI coding agent to get sensible baseline behavior. Think before acting. Keep things simple. Make surgical changes. Work toward verifiable goals.
 
 > Elder is part of the [chief-tribe](https://github.com/thaitype/chief-tribe) ecosystem.
