@@ -1,10 +1,10 @@
-# Elder 👴
+# Sage 👴
 
 > Baseline behavior principles for any AI coding agent.
 
-Elder is a small set of behavior principles that you drop into your AI coding agent to get sensible baseline behavior. Think before acting. Keep things simple. Make surgical changes. Work toward verifiable goals.
+Sage is a small set of behavior principles that you drop into your AI coding agent to get sensible baseline behavior. Think before acting. Keep things simple. Make surgical changes. Work toward verifiable goals.
 
-> Elder is part of the [chief-tribe](https://github.com/thaitype/chief-tribe) ecosystem.
+> Sage is part of the [chief-tribe](https://github.com/thaitype/chief-tribe) ecosystem.
 
 ## The Problem
 
@@ -20,11 +20,11 @@ Some of this is the model's fault. Some of it is the agent harness. Either way, 
 
 Different agents come with different built-in behavior. Claude Code ships with thousands of tokens of instructions. Pi ships with under a thousand. Gemini CLI abandons structured tools entirely. OpenCode borrows from whatever was popular last week.
 
-If you use more than one agent, or if you want predictable behavior regardless of which one you pick, you need your own baseline. Elder is that baseline.
+If you use more than one agent, or if you want predictable behavior regardless of which one you pick, you need your own baseline. Sage is that baseline.
 
-## What Elder Does
+## What Sage Does
 
-Elder gives your agent four principles:
+Sage gives your agent four principles:
 
 1. **Think Before Acting** — start with the smallest plausible interpretation; ask when uncertain
 2. **Simplicity First** — do the minimum that solves the problem; no speculative work
@@ -33,7 +33,7 @@ Elder gives your agent four principles:
 
 That's it. No tech stack opinions, no workflow, no required directory structure. Just behavior.
 
-## What Elder Is Not
+## What Sage Is Not
 
 - ❌ Not a framework — no roles, milestones, skills, or task management
 - ❌ Not a runtime — no CLI, no orchestration, no state
@@ -51,15 +51,15 @@ These four aren't magic. They're a starting point that addresses the most common
 | Refactoring unrelated code | Surgical Changes |
 | Declaring "done" prematurely | Goal-Driven Execution |
 
-If your experience with agents has been bumping into these same problems, Elder probably helps. If your problems are different, Elder might not be enough — but it's rarely wrong to have.
+If your experience with agents has been bumping into these same problems, Sage probably helps. If your problems are different, Sage might not be enough — but it's rarely wrong to have.
 
-> **Attribution.** These four principles are adapted from [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) by Forrest Chang, which in turn derives from [Andrej Karpathy's observations on LLM coding pitfalls](https://x.com/karpathy/status/2015883857489522876). Elder packages them as an agent-agnostic baseline.
+> **Attribution.** These four principles are adapted from [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) by Forrest Chang, which in turn derives from [Andrej Karpathy's observations on LLM coding pitfalls](https://x.com/karpathy/status/2015883857489522876). Sage packages them as an agent-agnostic baseline.
 
 ## Supported Agents
 
-Elder is agent-agnostic. It works with anything that reads a system prompt or instructions file:
+Sage is agent-agnostic. It works with anything that reads a system prompt or instructions file:
 
-| Agent | Where Elder goes |
+| Agent | Where Sage goes |
 |-------|-----------------|
 | Claude Code | `CLAUDE.md` or `AGENTS.md` |
 | OpenCode | `AGENTS.md` |
@@ -71,24 +71,24 @@ Elder is agent-agnostic. It works with anything that reads a system prompt or in
 | Pi | `AGENTS.md` or `SYSTEM.md` |
 | Windsurf, Kiro, Aider | `AGENTS.md` |
 
-If your agent reads any form of instruction file, Elder fits.
+If your agent reads any form of instruction file, Sage fits.
 
 ## Setup
 
 ### Option 1: Copy directly
 
 ```bash
-curl -o AGENTS.md https://raw.githubusercontent.com/thaitype/elder/main/AGENTS.md
+curl -o AGENTS.md https://raw.githubusercontent.com/thaitype/sage/main/AGENTS.md
 ```
 
 ### Option 2: Merge with existing instructions
 
-If you already have an `AGENTS.md` or equivalent, copy the contents of [`AGENTS.md`](./AGENTS.md) and add it to your file. Elder is designed to coexist with your project-specific rules.
+If you already have an `AGENTS.md` or equivalent, copy the contents of [`AGENTS.md`](./AGENTS.md) and add it to your file. Sage is designed to coexist with your project-specific rules.
 
-The typical pattern is: Elder on top, project rules below.
+The typical pattern is: Sage on top, project rules below.
 
 ```markdown
-# Agent Behavior Principles (Elder)
+# Agent Behavior Principles (Sage)
 
 ## 1. Think Before Acting
 ...
@@ -102,7 +102,7 @@ The typical pattern is: Elder on top, project rules below.
 - MUST use pnpm, not npm
 ```
 
-Elder establishes the baseline first. Project rules then layer on top for stack-specific or team-specific constraints.
+Sage establishes the baseline first. Project rules then layer on top for stack-specific or team-specific constraints.
 
 ## What's Inside
 
@@ -135,46 +135,46 @@ The full `AGENTS.md` is short enough to read in two minutes. Here's the structur
 
 See [`AGENTS.md`](./AGENTS.md) for the file you'll actually install.
 
-## When Elder Is Enough
+## When Sage Is Enough
 
-Elder is enough when:
+Sage is enough when:
 
 - You want a quick, no-commitment improvement to your agent's behavior
 - You're using ad-hoc prompting more than long-running projects
 - You have your own workflow and just want sensible defaults underneath it
 - You're evaluating different agents and want to normalize behavior across them
 
-Elder is not enough when you need structured planning, role separation, or multi-session state. Those are jobs for a framework — not a baseline.
+Sage is not enough when you need structured planning, role separation, or multi-session state. Those are jobs for a framework — not a baseline.
 
 ## Philosophy
 
-A few beliefs underpin Elder:
+A few beliefs underpin Sage:
 
 **1. Baseline behavior is the user's responsibility, not the harness's.**
 
-Every agent harness makes decisions about how the agent behaves, and those decisions change between releases. If you care about consistent behavior, you shouldn't depend on the harness to provide it. Elder lets you own the baseline directly, so it doesn't shift under you.
+Every agent harness makes decisions about how the agent behaves, and those decisions change between releases. If you care about consistent behavior, you shouldn't depend on the harness to provide it. Sage lets you own the baseline directly, so it doesn't shift under you.
 
 **2. A short, prescriptive prompt beats a long, descriptive one.**
 
-Modern models have been trained extensively on coding tasks. They don't need documentation explaining what a tool is or how to write a file. They do benefit from reminders about *how to be useful* — preferring simple solutions, asking before assuming, verifying before claiming. Elder is a reminder, not a manual.
+Modern models have been trained extensively on coding tasks. They don't need documentation explaining what a tool is or how to write a file. They do benefit from reminders about *how to be useful* — preferring simple solutions, asking before assuming, verifying before claiming. Sage is a reminder, not a manual.
 
 **3. Behavior is separate from workflow.**
 
-Workflow is how you organize work across sessions (milestones, plans, reports). Behavior is how the agent acts within a single turn. Elder handles only behavior. Workflow is a separate concern, for separate tools.
+Workflow is how you organize work across sessions (milestones, plans, reports). Behavior is how the agent acts within a single turn. Sage handles only behavior. Workflow is a separate concern, for separate tools.
 
 **4. Minimal is a feature, not a limitation.**
 
-Every line added to a baseline is a line the user has to agree with, remember, and potentially override. Elder stays small on purpose. Things that are situational belong in project rules. Things that are workflow belong in frameworks. Only universal behavior belongs in Elder.
+Every line added to a baseline is a line the user has to agree with, remember, and potentially override. Sage stays small on purpose. Things that are situational belong in project rules. Things that are workflow belong in frameworks. Only universal behavior belongs in Sage.
 
 ## Customizing
 
-Elder is a baseline, not a ceiling. You add your own rules — project-specific, team-specific, taste-specific — on top of it.
+Sage is a baseline, not a ceiling. You add your own rules — project-specific, team-specific, taste-specific — on top of it.
 
 Recommended pattern:
 
 ```markdown
-# Elder Baseline
-<elder content here>
+# Sage Baseline
+<sage content here>
 
 ---
 
@@ -187,18 +187,18 @@ Recommended pattern:
 <your conventions here>
 ```
 
-Elder sets the behavior floor. Your rules add specifics for your situation — tech stack constraints, team conventions, or exceptions when a principle doesn't fit (for example, allowing speculative work during prototyping).
+Sage sets the behavior floor. Your rules add specifics for your situation — tech stack constraints, team conventions, or exceptions when a principle doesn't fit (for example, allowing speculative work during prototyping).
 
 ## Contributing
 
-Elder changes rarely and deliberately. New principles should meet a high bar:
+Sage changes rarely and deliberately. New principles should meet a high bar:
 
 1. Does it apply to **every** coding task, regardless of language or tech stack?
 2. Does it address a common failure mode of current coding agents?
 3. Can it be stated in under 100 words?
 4. Is it distinct from the existing four principles?
 
-If all four are yes, open an issue to discuss. If any is no, it's probably better in a framework or project-specific rules file — not Elder.
+If all four are yes, open an issue to discuss. If any is no, it's probably better in a framework or project-specific rules file — not Sage.
 
 ## License
 
