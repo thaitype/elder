@@ -1,4 +1,4 @@
-# Sage 👴
+# Sage 🧙
 
 > Baseline behavior principles for any AI coding agent.
 
